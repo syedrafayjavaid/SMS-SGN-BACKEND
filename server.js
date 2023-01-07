@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const dotenv = require('dotenv');
 const cors = require('cors')
-const port = 3005;
+const port = process.env.port || 3005;
 const bodyParser = require('body-parser')
 const connectDB = require('./config/db')
 app.use(bodyParser.urlencoded({ extended: false }))
